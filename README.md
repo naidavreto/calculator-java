@@ -1,6 +1,18 @@
+Zbirni LOC: 153 LOC (calculator.java + start.java) + 19 LOC (licence) 
+
+
+
 *****Calculator.java*****
 	
 	LOC 134
+
+	Broj čvorova (n): 34
+	Broj bridova (e): 40
+	
+	C=E-N+2=40-34+2=4
+	Ciklomatska složenost iznosi 4.
+
+	U vezi s kognitivnom složenošću, možemo primijetiti da metoda evaluateExpression ima nekoliko grananja i petlji koje bi mogle otežati čitanje i razumijevanje koda. Također, metoda Calculate ima mnogo grananja, što također može povećati kognitivnu složenost.
 
 	Statička analiza:
 		
@@ -27,6 +39,14 @@ Code Smells:
 *****Start.java*****
 
 	LOC 19
+
+	Broj čvorova (n): 3
+	Broj bridova (e): 2
+	
+	C=E-N+2=2-3+2=1
+	Ciklomatska složenost iznosi 1.
+
+	Program je jednostavan, sa jednom petljom i jednim grananjem što znači da će kognitivna složenost biti niska upravo zbog jednostavnosti strukture i logike.
 
 	Statička analiza:
 	
