@@ -1,0 +1,32 @@
+public class CalculatorTest {
+
+    public static void main(String[] args) {
+        runTests();
+    }
+
+    private static void runTests() {
+        testExpression("2+3", "5.0");
+        testExpression("10-5", "5.0");
+        testExpression("4*6", "24.0");
+        testExpression("8/2", "4.0");
+        testExpression("7+3*2", "13.0"); // Test for operator precedence
+        testExpression("4-2*3", "-2.0"); // Test for operator precedence
+        testExpression("6/2+1", "4.0");  // Test for operator precedence
+        testExpression("1/0", "Infinity"); // Test division by zero
+        testExpression("0/0", "NaN"); // Test indeterminate form
+        testExpression("3.5+2.5", "6.0"); // Test decimal numbers
+        testExpression("-5*2", "-10.0"); // Test negative numbers
+        testExpression("-8/4", "-2.0"); // Test negative numbers
+        testExpression("2+3-4*2/2", "1.0"); // Test a complex expression
+    }
+
+    private static void testExpression(String expression, String expectedResult) {
+        String result = Calculator.Run(expression);
+        String status = result.equals(expectedResult) ? "PASS" : "FAIL";
+        System.out.println("Expression: " + expression + ", Result: " + result + ", Expected: " + expectedResult + ", Status: " + status);
+    }
+}
+
+//Sudeći prema pruženim test slučajevima, čini se da klasa Calculator ispravno obavlja osnovne aritmetičke operacije i daje željene rezultate.//
+//Slučajevi testiranja uključuju različite operacije poput zbrajanja, dijeljenja, množenja i oduzimanja, te obrađivanJe decimalnih brojeva, negativnih brojeva i sl.//
+//Sva testiranja su uspješno završena, što potvrđuje da je implementacija u skladu s očekivanjima za navedene situacije. //
